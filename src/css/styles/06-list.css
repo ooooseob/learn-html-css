@@ -3,16 +3,16 @@
   background-color: #fcf;
 
   ol {
-    list-style: upper-roman url(/src/assets//thumbnail//new.png);
+    list-style: upper-roman url("/src/assets/thumbnail/new.png");
   }
 }
 
 .bootcamp {
-  background: #ffc;
+  background-color: #ffc;
 
   ul {
     list-style-type: circle;
     list-style-position: inside;
-    list-style-image: url('/src/assets/thumbnail/new.png');
+    list-style-image: url("/src/assets/thumbnail/new.png");
   }
 }

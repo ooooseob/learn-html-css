@@ -1,27 +1,12 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 /* 전체 선택자 */
 * {
   font-weight: 300;
-  font-family:
-    'Pretendard Variable',
-    Pretendard,
-    -apple-system,
-    BlinkMacSystemFont,
-    system-ui,
-    Roboto,
-    'Helvetica Neue',
-    'Segoe UI',
-    'Apple SD Gothic Neo',
-    'Noto Sans KR',
-    'Malgun Gothic',
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-/* 태그(요소) 선택자 - Type selectors */
+/* 요소(태그) 선택자 - Type selectors */
 p {
   color: blue;
 }
@@ -47,22 +32,22 @@ div p {
   padding: 10px;
 }
 
-div p .combinator {
+div .combinator {
   color: green;
 }
 
-/* 자식 결합자 인데 'ul > li' 는 ul의 직계인 li만 적용     > 의 사용법 */
-ul > li {
+/* 자식 결합자 - Child combinator */
+ul>li {
   border: 1px solid green;
 }
 
-/* 인접 형제 결합자 - Next-sibling combinator    인접!  + 의 사용법 */
-h2 + p {
+/* 인접 형제 결합자 - Next-sibling combinator */
+h2+p {
   font-style: italic;
 }
 
-/* 일반 형제 결합자 - Subsequent-sibling combinator  떨어져있어도  ~ 의 사용법 */
-div ~ p {
+/* 일반 형제 결합자 - Subsequent-sibling combinator */
+div~p {
   font-weight: 700;
 }
 
@@ -74,11 +59,11 @@ section {
 }
 
 section::before {
-  content: '멋쟁이 사자처럼';
+  content: "멋쟁이 사저처럼";
   color: red;
 }
 
 section::after {
-  content: '프론트엔드 부트캠프';
+  content: "프론트엔드 부트캠프";
   color: green;
 }

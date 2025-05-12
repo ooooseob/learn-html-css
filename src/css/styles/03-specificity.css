@@ -1,3 +1,4 @@
+/* 상속, 겹침, 우선순위 */
 /* 상속 */
 .wrapper {
   color: green;
@@ -32,7 +33,13 @@ p {
   color: pink !important;
 }
 
-/* 겹침 속성 */
+
+
+
+
+/* 겹침 (상속) */
 body {
   color: red;
 }
+
+/* 겹침, 우선선위(선택자) */
