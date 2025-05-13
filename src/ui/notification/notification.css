@@ -1,42 +1,69 @@
-body{
+@property --point-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #22be61;
+}
+
+body {
   margin: 50px;
 }
-/* 알림 Notification */
-.notification{
-  border: 1px solid #9B9A90;
-  border-radius: .5rem;
+/* 알림 Notification 컴포넌트 */
+.notification {
+  --base-color: #9b9a90;
+
+  border: 1px solid var(--base-color, #9b9a90);
+  border-radius: 0.5rem;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   column-gap: 20px;
   min-inline-size: 260px;
+  color: var(--point-color);
 
-  svg{
+  svg {
     flex-shrink: 0;
   }
 
-  > div{
+  > div {
     flex-grow: 1;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     row-gap: 4px;
 
-    strong{
-      color: #22BE61;
+    strong {
       font-size: 1.125rem;
     }
 
-    time{
-      color: #22BE61;
+    time {
       font-size: 11px;
     }
 
-    p{
-      color: #9B9A90;
-      font-size: .875rem;
+    p {
+      color: var(--base-color, #9b9a90);
+      font-size: 0.875rem;
       inline-size: 100%;
+    }
+  }
+}
+
+/* 알림 Notification 리스트 */
+.notification-list {
+  --gap: 30px;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+
+  .notification {
+    width: 100%;
+
+    @media (width >= 600px) {
+      width: calc(50% - (var(--gap) / 2));
+    }
+    @media (width >= 1280px) {
+      width: calc(25% - ((var(--gap) * 3) / 4));
     }
   }
 }
