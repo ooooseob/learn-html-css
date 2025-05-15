@@ -1,0 +1,30 @@
+body {
+  margin: 50px;
+}
+
+.grid-table {
+  border-block: 2px solid red;
+  display: grid;
+  font-size: 13px;
+  min-inline-size: 530px;
+  padding: 10px;
+  column-gap: 12px;
+
+  grid-template-columns: minmax(maxcontent, 1fr) minmax(maxcontent, 3fr) minmax(maxcontent, 1fr) minmax(maxcontent, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  align-items: center;
+
+  dt:last-of-type {
+    align-self: start;
+    margin-block: 10px;
+  }
+
+  :is(dd, div):last-child {
+    grid-area: 4/2/5/5;
+  }
+
+  span {
+    display: block;
+    margin-block: 10px;
+  }
+}

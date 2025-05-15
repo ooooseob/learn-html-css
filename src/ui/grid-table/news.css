@@ -1,0 +1,30 @@
+body {
+  margin: 50px;
+  color: white;
+  background: black;
+}
+
+.news {
+  margin-block: 20px;
+  background: var(--dark-blue);
+  padding: 20px;
+  min-inline-size: 320px;
+  display: grid;
+  gap: 5px 20px;
+  grid-template-columns: minmax(180px, 1fr) max-content;
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .list,
+  .item {
+    display: contents;
+  }
+
+  .more {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+}
