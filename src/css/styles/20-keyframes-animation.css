@@ -1,0 +1,86 @@
+/* 키프레임 애니메이션 */
+body {
+  margin: 50px;
+}
+
+/* 키프레임 규칙 */
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: yellow;
+  }
+
+  100% {
+    width: 200px;
+    background: pink;
+  }
+}
+
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-play-state: paused; */
+  animation: zoom 5s 1s 2 alternate ease-in-out forwards running;
+}
+
+/* 공통 스타일 (.case) */
+.case .target-animation {
+  border-radius: 0.5rem;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  margin-block: 15px;
+}
+
+.fade .target-animation {
+  animation: fade 1.5s 0s infinite alternate ease-in forwards paused;
+  /* 애니메이션 이름, 지속시간, 지연시간, 반복횟수, 방향, 타이밍함수, fill-mode, 재생상태 */
+}
+
+.shrink .target-animation {
+  animation: shrink 1s 0s infinite alternate ease-in-out forwards paused;
+}
+
+.bounce .target-animation {
+  animation: bounce 1s 0s infinite ease-in-out alternate paused;
+}
+
+/* shake 애니메이션 */
+.shake .target-animation {
+  animation: shake 1s 0s infinite ease-in-out alternate running;
+}
+
+/* spin 애니메이션 */
+.spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1;
+  background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
+  border-radius: 50%;
+  animation: spin 1s 0s infinite linear paused;
+}
+
+/* Pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 1s 0s infinite ease-in-out alternate running;
+}
+
+/* Flip 애니메이션 */
+.flip .target-animation {
+  animation: flip 1s 0s infinite ease-in-out running;
+}
+
+/* Wobble 애니메이션 */
+.wobble .target-animation {
+  animation: wobble 1s 0s infinite ease-in-out running;
+}
